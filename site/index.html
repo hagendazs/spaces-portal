@@ -50,13 +50,14 @@ tailwind.config = { theme: { extend: { colors: {
     figure img{transition:transform .5s ease}
     figure:hover img{transform:scale(1.04)}
     a,summary,button{transition:color .15s ease, background-color .15s ease, border-color .15s ease}
+    /* scroll-reveal: pure CSS, no JS, content stays in DOM for crawlers */
+    @supports (animation-timeline: view()){
+      .reveal-grid>*{opacity:0;animation:reveal-up linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+    }
   }
+  @keyframes reveal-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
   figure{overflow:hidden}
   details>summary::-webkit-details-marker{display:none}
-  .slider{scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}
-  .slider::-webkit-scrollbar{height:8px}
-  .slider::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:9999px}
-  .slider::-webkit-scrollbar-track{background:transparent}
 </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
@@ -144,10 +145,9 @@ tailwind.config = { theme: { extend: { colors: {
   <div class="max-w-7xl mx-auto">
     <h2 class="text-3xl font-black mb-3">不同<span class="text-primary">場域</span>，不同需求，SPACES 都接得住</h2>
     <p class="text-gray-600 mb-10">金融、零售、倉儲、辦公、社區到住家——每個場域面對的風險不同，SPACES 以情境式方案精準對應各自的需求。</p>
-    <p class="text-sm text-gray-400 mb-5 md:hidden">← 左右滑動查看各場域 →</p>
-    <div class="slider flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" role="region" aria-label="解決方案場域輪播">
+    <div class="reveal-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="解決方案場域">
 
-      <article id="finance" class="snap-start shrink-0 w-[85%] sm:w-[380px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col">
+      <article id="finance" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
         <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1742092982802-dc3a5c08b687?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="銀行分行與金庫 — 金融場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">金融場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">金融</h3>
         <p class="text-sm text-gray-500 mt-1">銀行分行／ATM／金庫保管箱</p>
@@ -163,7 +163,7 @@ tailwind.config = { theme: { extend: { colors: {
         <a href="solutions/finance.html" class="mt-3 text-sm font-bold text-gold hover:underline">查看完整金融方案 →</a>
       </article>
 
-      <article id="retail" class="snap-start shrink-0 w-[85%] sm:w-[380px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col">
+      <article id="retail" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
         <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1604882767135-b41fac508fff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="門市賣場收銀區 — 零售場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">零售場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">商場零售</h3>
         <p class="text-sm text-gray-500 mt-1">門市／賣場／收銀區／後場庫房</p>
@@ -178,7 +178,7 @@ tailwind.config = { theme: { extend: { colors: {
         <p class="mt-4 pt-4 border-t border-gray-200 text-accent font-semibold text-sm">「看不到的損耗，從你看得到的那一刻起，就開始止血。」</p>
       </article>
 
-      <article id="warehouse" class="snap-start shrink-0 w-[85%] sm:w-[380px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col">
+      <article id="warehouse" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
         <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1644308925079-2cfda5debc53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="倉儲物流裝卸區 — 倉儲場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">倉儲場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">倉儲物流</h3>
         <p class="text-sm text-gray-500 mt-1">倉庫／物流中心／裝卸區</p>
@@ -193,7 +193,7 @@ tailwind.config = { theme: { extend: { colors: {
         <p class="mt-4 pt-4 border-t border-gray-200 text-accent font-semibold text-sm">「場域再大、再偏遠，異常發生時系統都還在線上。」</p>
       </article>
 
-      <article id="office" class="snap-start shrink-0 w-[85%] sm:w-[380px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col">
+      <article id="office" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
         <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1706074797611-a02f9ed06439?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="企業辦公室與機房 — 辦公場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">辦公場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">辦公</h3>
         <p class="text-sm text-gray-500 mt-1">企業辦公室／機房／會議區</p>
@@ -208,7 +208,7 @@ tailwind.config = { theme: { extend: { colors: {
         <p class="mt-4 pt-4 border-t border-gray-200 text-accent font-semibold text-sm">「嚴謹的門禁，不必犧牲加班的彈性。」</p>
       </article>
 
-      <article id="community" class="snap-start shrink-0 w-[85%] sm:w-[380px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col">
+      <article id="community" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
         <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1638454795595-0a0abf68614d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="住宅社區公設門廳 — 社區場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">社區場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">社區</h3>
         <p class="text-sm text-gray-500 mt-1">住宅社區／大樓公設／管理室</p>
@@ -223,7 +223,7 @@ tailwind.config = { theme: { extend: { colors: {
         <p class="mt-4 pt-4 border-t border-gray-200 text-accent font-semibold text-sm">「把公共空間顧好，住戶的安全感才是真的。」</p>
       </article>
 
-      <article id="home-scene" class="snap-start shrink-0 w-[85%] sm:w-[380px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col">
+      <article id="home-scene" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
         <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1630699144035-c0f6311ec482?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="住家門窗與居家安全 — 住家場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">住家場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">住家</h3>
         <p class="text-sm text-gray-500 mt-1">一般住宅／套房／獨居長者</p>
@@ -247,15 +247,14 @@ tailwind.config = { theme: { extend: { colors: {
   <div class="max-w-7xl mx-auto">
     <h2 class="text-3xl font-black mb-3">精選硬體設備，搭配 SPACES 雲端平台</h2>
     <p class="text-gray-600 mb-6">所有設備支援 OTA 雲端韌體更新｜APP 掃描 QR Code 快速新增設備。</p>
-    <p class="text-sm text-gray-400 mb-5 md:hidden">← 左右滑動瀏覽設備 →</p>
-    <div id="camera" class="slider flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5" role="region" aria-label="產品設備輪播">
-      <article class="snap-start shrink-0 w-[78%] sm:w-[300px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-host.png" alt="SPACES SGW 保全主機 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">SGW 保全主機</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">系統核心・三網備援（Wi-Fi／有線／LTE）・UPS 4–8H・斷網本地續錄</p></div></article>
-      <article class="snap-start shrink-0 w-[78%] sm:w-[300px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-cam-p1.png" alt="SPACES IPCAM P1 室內擺頭機 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">IPCAM P1 室內擺頭機</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">2K／300萬・360° 擺頭・雙向語音・夜視</p></div></article>
-      <article class="snap-start shrink-0 w-[78%] sm:w-[300px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-cam-d1.png" alt="SPACES IPCAM D1 室內半球 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">IPCAM D1 室內半球</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">2K／300萬・嵌入式・雙向語音・夜視</p></div></article>
-      <article class="snap-start shrink-0 w-[78%] sm:w-[300px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-cam-b1.png" alt="SPACES IPCAM B1 室外槍型 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">IPCAM B1 室外槍型</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">3K／500萬・IP66・變焦・PoE 供電</p></div></article>
-      <article class="snap-start shrink-0 w-[78%] sm:w-[300px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-cam-b2.png" alt="SPACES IPCAM B2 星光級 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">IPCAM B2 星光級</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">3K／500萬・IP66・星光夜視・戶外專用</p></div></article>
-      <article class="snap-start shrink-0 w-[78%] sm:w-[300px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-sensors.png" alt="SPACES 感測器組（位移／門窗／緊急鈕） 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">感測器組（位移／門窗／緊急鈕）</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">IP66・自保防拆・低耗電・一鍵直連管制中心</p></div></article>
-      <article class="snap-start shrink-0 w-[78%] sm:w-[300px] rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-app.png" alt="SPACES SPACES APP 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">SPACES APP</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">4 路即時・推播警報・門禁・影像回放・iOS／Android</p></div></article>
+    <div id="camera" class="reveal-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5" role="list" aria-label="產品設備">
+      <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col" role="listitem"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-host.png" alt="SPACES SGW 保全主機 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">SGW 保全主機</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">系統核心・三網備援（Wi-Fi／有線／LTE）・UPS 4–8H・斷網本地續錄</p></div></article>
+      <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col" role="listitem"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-cam-p1.png" alt="SPACES IPCAM P1 室內擺頭機 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">IPCAM P1 室內擺頭機</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">2K／300萬・360° 擺頭・雙向語音・夜視</p></div></article>
+      <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col" role="listitem"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-cam-d1.png" alt="SPACES IPCAM D1 室內半球 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">IPCAM D1 室內半球</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">2K／300萬・嵌入式・雙向語音・夜視</p></div></article>
+      <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col" role="listitem"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-cam-b1.png" alt="SPACES IPCAM B1 室外槍型 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">IPCAM B1 室外槍型</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">3K／500萬・IP66・變焦・PoE 供電</p></div></article>
+      <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col" role="listitem"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-cam-b2.png" alt="SPACES IPCAM B2 星光級 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">IPCAM B2 星光級</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">3K／500萬・IP66・星光夜視・戶外專用</p></div></article>
+      <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col" role="listitem"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-sensors.png" alt="SPACES 感測器組（位移／門窗／緊急鈕） 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">感測器組（位移／門窗／緊急鈕）</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">IP66・自保防拆・低耗電・一鍵直連管制中心</p></div></article>
+      <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col" role="listitem"><figure class="h-48 overflow-hidden bg-gray-50"><img src="images/device-app.png" alt="SPACES SPACES APP 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">SPACES APP</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">4 路即時・推播警報・門禁・影像回放・iOS／Android</p></div></article>
     </div>
     <div class="mt-8 grid sm:grid-cols-3 gap-4">
       <div id="web" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-5"><p class="font-bold text-accent">SPACES Web 後台</p><p class="text-sm text-gray-600 mt-1">瀏覽器即用，多畫面監看、事件日誌匯出、帳號權限與多場域管理。</p></div>
