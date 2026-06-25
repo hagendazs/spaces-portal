@@ -1,0 +1,75 @@
+{
+  "$description": "SKS Corporate Portal design tokens — Tokens Studio for Figma format (legacy value/type). Import via the Tokens Studio plugin → Tools → Import, then push to Figma Variables. Mirrors design/DESIGN-TOKENS.md §8 and REDESIGN-BRIEF.md §6.",
+  "global": {
+    "color": {
+      "navy":      { "value": "#002f82", "type": "color" },
+      "navyDark":  { "value": "#012a55", "type": "color" },
+      "navyLogo":  { "value": "#003d9c", "type": "color" },
+      "blue":      { "value": "#0066b1", "type": "color" },
+      "gold":      { "value": "#ffc129", "type": "color" },
+      "goldAlt":   { "value": "#fed01f", "type": "color" },
+      "red":       { "value": "#c90e2d", "type": "color" },
+      "white":     { "value": "#ffffff", "type": "color" },
+      "gray50":    { "value": "#f8f9fa", "type": "color" },
+      "gray300":   { "value": "#dee2e6", "type": "color" },
+      "gray500":   { "value": "#6c757d", "type": "color" },
+      "gray900":   { "value": "#212529", "type": "color" },
+      "black":     { "value": "#000000", "type": "color" }
+    },
+    "state": {
+      "success": { "value": "#28a745", "type": "color" },
+      "warning": { "value": "#ffc129", "type": "color" },
+      "danger":  { "value": "#c90e2d", "type": "color" },
+      "info":    { "value": "#0066b1", "type": "color" }
+    },
+    "space": {
+      "0": { "value": "0",  "type": "spacing" },
+      "1": { "value": "4",  "type": "spacing" },
+      "2": { "value": "8",  "type": "spacing" },
+      "3": { "value": "16", "type": "spacing" },
+      "4": { "value": "24", "type": "spacing" },
+      "5": { "value": "48", "type": "spacing" },
+      "6": { "value": "72", "type": "spacing" },
+      "7": { "value": "96", "type": "spacing" }
+    },
+    "radius": {
+      "base": { "value": "4",    "type": "borderRadius" },
+      "md":   { "value": "5",    "type": "borderRadius" },
+      "lg":   { "value": "10",   "type": "borderRadius" },
+      "xl":   { "value": "25",   "type": "borderRadius" },
+      "pill": { "value": "9999", "type": "borderRadius" }
+    },
+    "fontFamily": {
+      "base": { "value": "Noto Sans TC, Microsoft JhengHei, PingFang TC, -apple-system, sans-serif", "type": "fontFamilies" }
+    },
+    "fontWeight": {
+      "regular": { "value": "400", "type": "fontWeights" },
+      "medium":  { "value": "500", "type": "fontWeights" },
+      "bold":    { "value": "700", "type": "fontWeights" }
+    },
+    "lineHeight": {
+      "body":    { "value": "150%", "type": "lineHeights" },
+      "heading": { "value": "125%", "type": "lineHeights" },
+      "cjk":     { "value": "170%", "type": "lineHeights" }
+    },
+    "fontSize": {
+      "xs":        { "value": "12", "type": "fontSizes" },
+      "sm":        { "value": "14", "type": "fontSizes" },
+      "base":      { "value": "16", "type": "fontSizes" },
+      "h5":        { "value": "18", "type": "fontSizes" },
+      "h4":        { "value": "20", "type": "fontSizes" },
+      "h3":        { "value": "24", "type": "fontSizes" },
+      "h2":        { "value": "32", "type": "fontSizes" },
+      "h1":        { "value": "40", "type": "fontSizes" },
+      "displayMd": { "value": "48", "type": "fontSizes" },
+      "displayLg": { "value": "70", "type": "fontSizes" }
+    },
+    "shadow": {
+      "xs": { "value": { "x": "0", "y": "1", "blur": "2",  "spread": "0", "color": "#00000014", "type": "dropShadow" }, "type": "boxShadow" },
+      "md": { "value": { "x": "0", "y": "2", "blur": "8",  "spread": "0", "color": "#0000001a", "type": "dropShadow" }, "type": "boxShadow" },
+      "lg": { "value": { "x": "0", "y": "8", "blur": "24", "spread": "0", "color": "#00000026", "type": "dropShadow" }, "type": "boxShadow" }
+    }
+  },
+  "$themes": [],
+  "$metadata": { "tokenSetOrder": ["global"] }
+}
