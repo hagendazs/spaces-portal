@@ -1,0 +1,56 @@
+name: Growth agents
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"    # web — Mondays 09:00 Taipei
+    # Phase 2 adds:  - cron: "0 1 * * 3"    # grow — Wednesdays
+    # Phase 3 adds:  - cron: "0 1 1 * *"    # ads  — monthly, 1st
+  workflow_dispatch:
+    inputs:
+      agent:
+        type: choice
+        options: [web, grow, ads]
+        default: web
+
+concurrency:
+  group: growth-agents      # never two agents at once (LOG.md append races)
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # agents use git log for lastmod checks
+
+      - id: pick
+        run: |
+          case "${{ github.event.schedule }}" in
+            "0 1 * * 1") echo "agent=web"  >> "$GITHUB_OUTPUT" ;;
+            "0 1 * * 3") echo "agent=grow" >> "$GITHUB_OUTPUT" ;;
+            "0 1 1 * *") echo "agent=ads"  >> "$GITHUB_OUTPUT" ;;
+            *)           echo "agent=${{ inputs.agent }}" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PLAUSIBLE_API_KEY: ${{ secrets.PLAUSIBLE_API_KEY }}    # Phase 2+
+          FORMSPREE_API_KEY: ${{ secrets.FORMSPREE_API_KEY }}    # Phase 2+
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Read agents/${{ steps.pick.outputs.agent }}.md and execute it fully.
+            Today is ${{ github.run_started_at }}. You are running headless in CI.
+          claude_args: |
+            --model claude-opus-4-8
+            --max-turns 60
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Bash(git:*),Bash(gh:*),Bash(curl:*),Bash(python3:*),Bash(ls:*),Bash(cat:*)"
