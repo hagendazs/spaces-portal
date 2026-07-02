@@ -33,15 +33,16 @@
 <script>
 tailwind.config = { theme: { extend: { colors: {
   primary: { DEFAULT:'#1B5CC8', dark:'#1347A0', light:'#2B6FE0' },
-  accent: '#0EA5E9', ink: '#0F172A', gold: '#FFC129'
-}, fontFamily: { sans:['"Noto Sans TC"','system-ui','sans-serif'] } } } }
+  accent: '#0EA5E9', ink: '#0F172A', gold: '#FFC129', paper: '#F7F5F0'
+}, fontFamily: { sans:['"Noto Sans TC"','system-ui','sans-serif'], serif:['"Noto Serif TC"','serif'] } } } }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
 <style>
   html{scroll-behavior:smooth} body{font-family:'Noto Sans TC',system-ui,sans-serif}
   .hero-grad{background:radial-gradient(1200px 600px at 70% -10%,#1B5CC8 0%,#11337a 35%,#0F172A 75%)}
-  section{scroll-margin-top:72px}
+  .ghost{position:absolute;font-weight:900;letter-spacing:-.04em;line-height:1;color:rgba(255,255,255,.07);user-select:none;pointer-events:none}
+  section{scroll-margin-top:84px}
 
   /* modest effects (reduced-motion safe) */
   @media (prefers-reduced-motion: no-preference){
@@ -62,13 +63,13 @@ tailwind.config = { theme: { extend: { colors: {
   details>summary::-webkit-details-marker{display:none}
 </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-paper text-gray-900 antialiased">
 
 <!-- ============ Header ============ -->
-<header class="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur border-b border-gray-200 shadow-sm">
-  <nav class="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between" aria-label="主選單">
+<header class="fixed top-3 inset-x-0 z-50 px-3">
+  <nav class="max-w-5xl mx-auto h-14 pl-5 pr-2 flex items-center justify-between rounded-full bg-white/90 backdrop-blur border border-gray-200/70 shadow-lg shadow-ink/5" aria-label="主選單">
     <a href="#home" class="flex items-center gap-2 font-black text-lg tracking-tight">
-      <span class="inline-grid place-items-center w-8 h-8 rounded-lg bg-primary text-white">S</span>
+      <span class="inline-grid place-items-center w-8 h-8 rounded-full bg-ink text-white">S</span>
       SKS <span class="text-accent">SPACES</span>
     </a>
     <div class="hidden md:flex items-center gap-7 text-sm text-gray-600">
@@ -78,43 +79,44 @@ tailwind.config = { theme: { extend: { colors: {
       <a href="#faq" class="hover:text-gray-900">常見問題</a>
       <a href="#media" class="hover:text-gray-900">媒體報導</a>
     </div>
-    <div class="flex items-center gap-2"><a href="#contact" class="rounded-full bg-primary hover:bg-primary-light px-4 py-2 text-sm font-bold text-white">預約諮詢</a><details class="md:hidden relative"><summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100 text-gray-700" aria-label="選單"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></summary><div class="absolute right-0 top-12 w-44 bg-white border border-gray-200 rounded-xl shadow-lg p-2 flex flex-col z-50"><a href="#home" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">首頁</a><a href="#solutions" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">解決方案</a><a href="#products" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">產品介紹</a><a href="#faq" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">常見問題</a><a href="#media" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">媒體報導</a></div></details></div>
+    <div class="flex items-center gap-2"><a href="#contact" class="group flex items-center gap-2 rounded-full bg-ink hover:bg-primary px-4 py-2 text-sm font-bold text-white">預約諮詢<span aria-hidden="true" class="grid place-items-center w-5 h-5 rounded-full bg-white/20 text-[11px] group-hover:translate-x-0.5 transition-transform">→</span></a><details class="md:hidden relative"><summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100 text-gray-700" aria-label="選單"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></summary><div class="absolute right-0 top-12 w-44 bg-white border border-gray-200 rounded-xl shadow-lg p-2 flex flex-col z-50"><a href="#home" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">首頁</a><a href="#solutions" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">解決方案</a><a href="#products" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">產品介紹</a><a href="#faq" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">常見問題</a><a href="#media" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">媒體報導</a></div></details></div>
   </nav>
 </header>
 
 <main>
 <!-- ============ Hero ============ -->
-<section id="home" class="bg-gradient-to-b from-blue-50 to-white pt-32 pb-24 px-5 border-b border-gray-100">
-  <div class="max-w-7xl mx-auto text-center">
-    <p class="text-primary font-semibold tracking-widest text-sm mb-4">次世代韌性保全 · Next-Gen Resilient Security</p>
-    <h1 class="text-[clamp(2rem,7vw,3.75rem)] font-black leading-tight text-gray-900">
+<section id="home" class="pt-24 pb-16 px-3 md:px-5">
+  <div class="relative max-w-7xl mx-auto rounded-[2.5rem] hero-grad text-white overflow-hidden px-6 md:px-14 pt-14 md:pt-20 pb-10">
+    <span aria-hidden="true" class="ghost right-0 top-2 text-[22vw] md:text-[13rem]">SPACES</span>
+    <p class="relative text-sky-300 font-semibold tracking-widest text-sm mb-5">次世代韌性保全 · NEXT-GEN RESILIENT SECURITY</p>
+    <h1 class="relative font-serif text-[clamp(2.1rem,6vw,4.25rem)] font-black leading-tight max-w-3xl">
       斷網斷電，也不停止守護<br class="hidden md:block">
-      <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">SPACES 智慧空間管理平台</span>
+      <span class="bg-gradient-to-r from-sky-300 to-white bg-clip-text text-transparent">SPACES 智慧空間管理平台</span>
     </h1>
-    <p class="mt-6 max-w-2xl mx-auto text-gray-600 text-lg">
+    <p class="relative mt-6 max-w-2xl text-slate-300 text-lg">
       SKS SPACES 是新光保全的次世代韌性保全平台，整合 AI 影像分析、IoT 感測、三網備援與 24 小時管制中心，
       讓每一個空間都能被理解、被預警、被持續守護。
     </p>
-    <div class="mt-8 flex flex-wrap gap-3 justify-center">
-      <a href="#solutions" class="rounded-full bg-primary text-white font-bold px-6 py-3 hover:bg-primary-light">立即了解</a>
-      <a href="#contact" class="rounded-full border border-gray-300 text-gray-900 px-6 py-3 font-bold hover:bg-gray-50">預約諮詢</a>
+    <div class="relative mt-8 flex flex-wrap gap-3">
+      <a href="#solutions" class="group flex items-center gap-2 rounded-full bg-white text-ink font-bold px-6 py-3 hover:bg-sky-100">立即了解<span aria-hidden="true" class="grid place-items-center w-5 h-5 rounded-full bg-ink/10 text-[11px] group-hover:translate-x-0.5 transition-transform">→</span></a>
+      <a href="#contact" class="rounded-full border border-white/30 text-white px-6 py-3 font-bold hover:bg-white/10">預約諮詢</a>
     </div>
-    <dl class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-      <div class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-4"><dt class="text-2xl font-black text-accent">30 天</dt><dd class="text-xs text-gray-500 mt-1">事件影像雲端保存</dd></div>
-      <div class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-4"><dt class="text-2xl font-black text-accent">24H</dt><dd class="text-xs text-gray-500 mt-1">全天候管制中心</dd></div>
-      <div class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-4"><dt class="text-2xl font-black text-accent">三網</dt><dd class="text-xs text-gray-500 mt-1">Wi-Fi／有線／LTE 備援</dd></div>
-      <div class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-4"><dt class="text-2xl font-black text-accent">4–8H</dt><dd class="text-xs text-gray-500 mt-1">UPS 停電續航</dd></div>
+    <dl class="relative mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl">
+      <div class="rounded-2xl bg-white/[.07] border border-white/10 backdrop-blur p-4"><dt class="font-serif text-3xl font-black text-white">30 天</dt><dd class="text-xs text-slate-400 mt-1">事件影像雲端保存</dd></div>
+      <div class="rounded-2xl bg-white/[.07] border border-white/10 backdrop-blur p-4"><dt class="font-serif text-3xl font-black text-white">24H</dt><dd class="text-xs text-slate-400 mt-1">全天候管制中心</dd></div>
+      <div class="rounded-2xl bg-white/[.07] border border-white/10 backdrop-blur p-4"><dt class="font-serif text-3xl font-black text-white">三網</dt><dd class="text-xs text-slate-400 mt-1">Wi-Fi／有線／LTE 備援</dd></div>
+      <div class="rounded-2xl bg-white/[.07] border border-white/10 backdrop-blur p-4"><dt class="font-serif text-3xl font-black text-white">4–8H</dt><dd class="text-xs text-slate-400 mt-1">UPS 停電續航</dd></div>
     </dl>
-    <figure class="mt-12 max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
+    <figure class="relative mt-12 max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
       <img src="images/hero-command-center.png" alt="SPACES 智慧安防管制中心與 APP 儀表板示意 — AI 影像分析、分區監控與即時告警" loading="lazy" class="w-full object-cover" />
     </figure>
   </div>
 </section>
 
 <!-- ============ What is SPACES (entity definition, answer-first) ============ -->
-<section id="general" class="py-20 px-5 bg-white">
+<section id="general" class="py-20 px-5">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-black mb-4">SKS SPACES 是什麼？</h2>
+    <h2 class="font-serif text-3xl md:text-4xl font-black mb-4">SKS SPACES 是什麼？</h2>
     <p class="text-lg text-gray-700 leading-relaxed">
       SKS SPACES 是新光保全推出的<strong>次世代智慧空間管理平台</strong>，結合 AI 影像分析、IoT 感測設備與雲端服務，
       提供從安全監控、防盜防災到空間管理的<strong>一站式智慧解決方案</strong>。它不只是監視器或保全設備，
@@ -129,9 +131,9 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- ============ Resilience ============ -->
-<section id="resilience" class="py-20 px-5 bg-gray-50">
+<section id="resilience" class="py-20 px-5 bg-white">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-black mb-3">為什麼說 SPACES 是「韌性」保全？</h2>
+    <h2 class="font-serif text-3xl md:text-4xl font-black mb-3">為什麼說 SPACES 是「韌性」保全？</h2>
     <figure class="mb-8 rounded-2xl overflow-hidden border border-gray-200 shadow-sm"><img src="images/resilience-network.png" alt="三網備援示意 — Wi-Fi／有線／LTE 自動切換、UPS 備電與雲端同步" loading="lazy" class="w-full h-72 object-cover" /></figure>
     <p class="text-gray-600 mb-8 max-w-3xl">安全最大的風險，不是設備故障，而是在關鍵時刻失去能力。SPACES 透過三網備援、UPS 備電、本地錄影與雲端同步，確保重要事件不因停電或斷網而遺失。</p>
     <div class="grid md:grid-cols-3 gap-5">
@@ -143,14 +145,14 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- ============ Solutions (6 scenarios, answer-first + spec→benefit) ============ -->
-<section id="solutions" class="py-20 px-5 bg-white">
+<section id="solutions" class="py-20 px-5">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-black mb-3">不同<span class="text-primary">場域</span>，不同需求，SPACES 都接得住</h2>
+    <h2 class="font-serif text-3xl md:text-4xl font-black mb-3">不同<span class="text-primary">場域</span>，不同需求，SPACES 都接得住</h2>
     <p class="text-gray-600 mb-10">金融、零售、倉儲、辦公、社區到住家——每個場域面對的風險不同，SPACES 以情境式方案精準對應各自的需求。</p>
     <div class="reveal-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="解決方案場域">
 
       <article id="finance" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
-        <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1742092982802-dc3a5c08b687?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="銀行分行與金庫 — 金融場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">金融場域</figcaption></figure>
+        <figure class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-[#1B2E8F] to-[#2B6FE0]"><span aria-hidden="true" class="ghost left-3 -bottom-2 text-6xl">FINANCE</span><figcaption class="absolute top-2 left-2 bg-white/15 border border-white/25 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">金融場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">金融</h3>
         <p class="text-sm text-gray-500 mt-1">銀行分行／ATM／金庫保管箱</p>
         <p class="mt-3 text-gray-700">銀行打烊，風險才進場。SPACES 依營業／非營業時段自動切換布撤防，金庫前室一有異動即告警；櫃員靜默緊急鈕一按，不出聲、不亮燈，通報直達管制中心。</p>
@@ -166,7 +168,7 @@ tailwind.config = { theme: { extend: { colors: {
       </article>
 
       <article id="retail" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
-        <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1604882767135-b41fac508fff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="門市賣場收銀區 — 零售場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">零售場域</figcaption></figure>
+        <figure class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-[#92400E] to-[#F59E0B]"><span aria-hidden="true" class="ghost left-3 -bottom-2 text-6xl">RETAIL</span><figcaption class="absolute top-2 left-2 bg-white/15 border border-white/25 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">零售場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">商場零售</h3>
         <p class="text-sm text-gray-500 mt-1">門市／賣場／收銀區／後場庫房</p>
         <p class="mt-3 text-gray-700">零售的損失，多半發生在沒人看著的時候。SPACES 打烊自動布防、開店自動撤防，收銀區與後場一有位移即告警；連鎖品牌用單一 APP 集中監看多店。</p>
@@ -181,7 +183,7 @@ tailwind.config = { theme: { extend: { colors: {
       </article>
 
       <article id="warehouse" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
-        <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1644308925079-2cfda5debc53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="倉儲物流裝卸區 — 倉儲場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">倉儲場域</figcaption></figure>
+        <figure class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-[#1E293B] to-[#64748B]"><span aria-hidden="true" class="ghost left-3 -bottom-2 text-6xl">LOGISTICS</span><figcaption class="absolute top-2 left-2 bg-white/15 border border-white/25 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">倉儲場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">倉儲物流</h3>
         <p class="text-sm text-gray-500 mt-1">倉庫／物流中心／裝卸區</p>
         <p class="mt-3 text-gray-700">倉儲場域大、夜間多無人，捲門與裝卸口最常被盯上，偏遠節點還常沒有固網。SPACES 主機支援 LTE，沒有網路線也能快速部署。</p>
@@ -196,7 +198,7 @@ tailwind.config = { theme: { extend: { colors: {
       </article>
 
       <article id="office" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
-        <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1706074797611-a02f9ed06439?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="企業辦公室與機房 — 辦公場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">辦公場域</figcaption></figure>
+        <figure class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-[#312E81] to-[#6366F1]"><span aria-hidden="true" class="ghost left-3 -bottom-2 text-6xl">OFFICE</span><figcaption class="absolute top-2 left-2 bg-white/15 border border-white/25 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">辦公場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">辦公</h3>
         <p class="text-sm text-gray-500 mt-1">企業辦公室／機房／會議區</p>
         <p class="mt-3 text-gray-700">辦公空間下班後要整體布防，機房與資料室則要嚴格門禁。SPACES 依上下班排程自動布撤防，員工、訪客、外包權限用 APP 分項授權、可設時效。</p>
@@ -211,7 +213,7 @@ tailwind.config = { theme: { extend: { colors: {
       </article>
 
       <article id="community" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
-        <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1638454795595-0a0abf68614d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="住宅社區公設門廳 — 社區場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">社區場域</figcaption></figure>
+        <figure class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-[#14532D] to-[#22C55E]"><span aria-hidden="true" class="ghost left-3 -bottom-2 text-6xl">COMMUNITY</span><figcaption class="absolute top-2 left-2 bg-white/15 border border-white/25 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">社區場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">社區</h3>
         <p class="text-sm text-gray-500 mt-1">住宅社區／大樓公設／管理室</p>
         <p class="mt-3 text-gray-700">社區要同時顧門廳、公設、住戶與訪客通行，還有電梯與公設的緊急求助。SPACES 把公共區域分區管理，整合既有設備不必整套換新。</p>
@@ -226,7 +228,7 @@ tailwind.config = { theme: { extend: { colors: {
       </article>
 
       <article id="home-scene" class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6 flex flex-col" role="listitem">
-        <figure class="relative overflow-hidden rounded-xl mb-4"><img src="https://images.unsplash.com/photo-1630699144035-c0f6311ec482?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="住家門窗與居家安全 — 住家場域智慧安防" loading="lazy" class="w-full h-40 object-cover" /><figcaption class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">住家場域</figcaption></figure>
+        <figure class="relative overflow-hidden rounded-xl mb-4 h-40 bg-gradient-to-br from-[#075985] to-[#38BDF8]"><span aria-hidden="true" class="ghost left-3 -bottom-2 text-6xl">HOME</span><figcaption class="absolute top-2 left-2 bg-white/15 border border-white/25 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">住家場域</figcaption></figure>
         <h3 class="text-xl font-bold text-accent">住家</h3>
         <p class="text-sm text-gray-500 mt-1">一般住宅／套房／獨居長者</p>
         <p class="mt-3 text-gray-700">出門一鍵布防，門窗、陽台一被打開就推播到手機；臥室、浴室的緊急鈕，讓長者跌倒或不適時一按，家人手機同步收到。安裝簡易可自助上線。</p>
@@ -245,9 +247,9 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- ============ Products ============ -->
-<section id="products" class="py-20 px-5 bg-gray-50">
+<section id="products" class="py-20 px-5 bg-white">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-black mb-3">精選硬體設備，搭配 SPACES 雲端平台</h2>
+    <h2 class="font-serif text-3xl md:text-4xl font-black mb-3">精選硬體設備，搭配 SPACES 雲端平台</h2>
     <p class="text-gray-600 mb-6">所有設備支援 OTA 雲端韌體更新｜APP 掃描 QR Code 快速新增設備。</p>
     <div id="camera" class="reveal-grid grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5" role="list" aria-label="產品設備">
       <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h overflow-hidden flex flex-col" role="listitem"><figure class="aspect-[4/3] overflow-hidden bg-gray-50"><img src="images/device-host.png" alt="SPACES SGW 保全主機 產品圖" loading="lazy" class="w-full h-full object-cover" /></figure><div class="p-5"><p class="font-bold text-gray-900">SGW 保全主機</p><p class="text-sm text-gray-600 mt-1 leading-relaxed">系統核心・三網備援（Wi-Fi／有線／LTE）・UPS 4–8H・斷網本地續錄</p></div></article>
@@ -267,9 +269,9 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- ============ FAQ (highest AEO surface) ============ -->
-<section id="faq" class="py-20 px-5 bg-white">
+<section id="faq" class="py-20 px-5">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-black mb-8">常見問題 FAQ</h2>
+    <h2 class="font-serif text-3xl md:text-4xl font-black mb-8">常見問題 FAQ</h2>
     <div class="space-y-3">
       <details class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5 group"><summary class="font-bold cursor-pointer list-none flex justify-between items-center"><h3 class="inline">SKS SPACES 是什麼？</h3><span class="text-accent group-open:rotate-45 transition">+</span></summary><p class="mt-3 text-sm text-gray-600 leading-relaxed">SKS SPACES 是新光保全推出的次世代智慧空間管理平台，結合 AI 影像分析、IoT 感測設備與雲端服務，提供從安全監控、防盜防災到空間管理的一站式智慧解決方案。</p></details>
       <details class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5 group"><summary class="font-bold cursor-pointer list-none flex justify-between items-center"><h3 class="inline">SPACES 與傳統保全系統有什麼不同？</h3><span class="text-accent group-open:rotate-45 transition">+</span></summary><p class="mt-3 text-sm text-gray-600 leading-relaxed">SPACES 採主動式風險管理模式，系統可自動偵測異常並即時告警。傳統保全多為被動感測觸發；SPACES 則提供事前預警、事中快速處置、事後完整舉證，且支援遠端 APP 管理。</p></details>
@@ -287,9 +289,9 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- ============ Media ============ -->
-<section id="media" class="py-20 px-5 bg-gray-50">
+<section id="media" class="py-20 px-5 bg-white">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-black mb-8">媒體報導</h2>
+    <h2 class="font-serif text-3xl md:text-4xl font-black mb-8">媒體報導</h2>
     <div id="press" class="grid md:grid-cols-3 gap-6">
       <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6"><p class="text-xs text-accent font-semibold">智慧城市展</p><h3 class="font-bold mt-2">搶攻智慧城市商機 新光保全導入 SKS SPACES</h3><p class="text-sm text-gray-600 mt-2">於 2026 智慧城市展以「Safe City, Smart Spaces」為主題參展，推動安全服務由被動監控升級為主動式風險管理。</p></article>
       <article class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6"><p class="text-xs text-accent font-semibold">展區亮點</p><h3 class="font-bold mt-2">5 大沉浸式 AI 應用展區</h3><p class="text-sm text-gray-600 mt-2">SKS SPACES 次世代韌性保全系統整合影像辨識、AI 分析與智慧維運技術，呈現跨域整合藍圖。</p></article>
@@ -299,22 +301,26 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- ============ Contact ============ -->
-<section id="contact" class="py-20 px-5 bg-white">
+<section id="contact" class="py-20 px-5">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-black mb-3">為您的空間打造專屬防護</h2>
+    <h2 class="font-serif text-3xl md:text-4xl font-black mb-3">為您的空間打造專屬防護</h2>
     <p class="text-gray-600 mb-8">全台數萬個場域的信賴選擇。讓專業顧問為您量身規劃最合適的智慧安防方案。</p>
     <div class="grid sm:grid-cols-3 gap-4 mb-8 text-sm">
       <div class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5"><p class="text-gray-500">免費服務專線</p><p class="font-bold text-accent mt-1">0800-668-850</p></div>
       <div class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5"><p class="text-gray-500">電子郵件</p><p class="font-bold text-accent mt-1">service@sks.com.tw</p></div>
       <div class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5"><p class="text-gray-500">公司地址</p><p class="font-bold mt-1">台北市內湖區行愛路128號</p></div>
     </div>
-    <a href="mailto:service@sks.com.tw?subject=SPACES 諮詢" class="inline-block rounded-full bg-primary hover:bg-primary-light px-8 py-3 font-bold text-white">發送諮詢訊息</a>
+    <a href="mailto:service@sks.com.tw?subject=SPACES 諮詢" class="group inline-flex items-center gap-2 rounded-full bg-ink hover:bg-primary px-8 py-3 font-bold text-white">發送諮詢訊息<span aria-hidden="true" class="grid place-items-center w-5 h-5 rounded-full bg-white/20 text-[11px] group-hover:translate-x-0.5 transition-transform">→</span></a>
   </div>
 </section>
 </main>
 
-<footer class="border-t border-gray-200 py-8 px-5 text-center text-sm text-gray-400">
-  © 新光保全 Shin Kong Security · SKS SPACES 智慧空間管理平台 · service@sks.com.tw · 0800-668-850
+<footer class="px-3 md:px-5 pb-5">
+  <div class="relative max-w-7xl mx-auto rounded-[2rem] bg-ink overflow-hidden text-center py-12 px-5">
+    <span aria-hidden="true" class="ghost left-1/2 -translate-x-1/2 -bottom-4 text-[5.5rem] whitespace-nowrap">SKS SPACES</span>
+    <p class="relative font-serif text-white text-2xl font-black">SKS <span class="text-sky-300">SPACES</span></p>
+    <p class="relative mt-3 text-sm text-slate-400">© 新光保全 Shin Kong Security · SKS SPACES 智慧空間管理平台 · service@sks.com.tw · 0800-668-850</p>
+  </div>
 </footer>
 
 </body>
