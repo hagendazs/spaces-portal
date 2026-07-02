@@ -26,12 +26,14 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = { theme: { extend: { colors: {
-  primary: { DEFAULT:'#1B5CC8', dark:'#1347A0', light:'#2B6FE0' }, accent:'#0EA5E9', ink:'#0F172A', gold:'#FFC129'
-}, fontFamily: { sans:['"Noto Sans TC"','system-ui','sans-serif'] } } } }
+  primary: { DEFAULT:'#1B5CC8', dark:'#1347A0', light:'#2B6FE0' }, accent:'#0EA5E9', ink:'#0F172A', gold:'#FFC129', paper:'#F7F5F0'
+}, fontFamily: { sans:['"Noto Sans TC"','system-ui','sans-serif'], serif:['"EB Garamond"','"Noto Serif TC"','serif'] } } } }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
-<style>html{scroll-behavior:smooth}body{font-family:'Noto Sans TC',system-ui,sans-serif}section{scroll-margin-top:72px}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>html{scroll-behavior:smooth}body{font-family:'Noto Sans TC',system-ui,sans-serif}section{scroll-margin-top:84px}
+  .ghost{position:absolute;font-weight:700;letter-spacing:-.03em;line-height:1;color:rgba(255,255,255,.08);user-select:none;pointer-events:none}
+  .ghost-card{color:rgba(255,255,255,.14)}
   /* modest effects (reduced-motion safe) */
   @media (prefers-reduced-motion: no-preference){
     .card-h{transition:transform .2s ease, box-shadow .2s ease}
@@ -44,18 +46,18 @@ tailwind.config = { theme: { extend: { colors: {
   details>summary::-webkit-details-marker{display:none}
 </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-paper text-gray-900 antialiased">
 
-<header class="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur border-b border-gray-200 shadow-sm">
-  <nav class="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between" aria-label="主選單">
-    <a href="../" class="flex items-center gap-2 font-black text-lg tracking-tight"><span class="inline-grid place-items-center w-8 h-8 rounded-lg bg-primary text-white">S</span>SKS <span class="text-accent">SPACES</span></a>
+<header class="fixed top-3 inset-x-0 z-50 px-3">
+  <nav class="max-w-5xl mx-auto h-14 pl-5 pr-2 flex items-center justify-between rounded-full bg-white/90 backdrop-blur border border-gray-200/70 shadow-lg shadow-ink/5" aria-label="主選單">
+    <a href="../" class="flex items-center gap-2 font-black text-lg tracking-tight"><span class="inline-grid place-items-center w-8 h-8 rounded-full bg-ink text-white">S</span>SKS <span class="text-accent">SPACES</span></a>
     <div class="hidden md:flex items-center gap-7 text-sm text-gray-600">
       <a href="../" class="hover:text-gray-900">首頁</a>
       <a href="../#solutions" class="text-gray-900 font-semibold">解決方案</a>
       <a href="../#products" class="hover:text-gray-900">產品介紹</a>
       <a href="../#faq" class="hover:text-gray-900">常見問題</a>
     </div>
-    <div class="flex items-center gap-2"><a href="../#contact" class="rounded-full bg-primary hover:bg-primary-light px-4 py-2 text-sm font-bold text-white">預約諮詢</a><details class="md:hidden relative"><summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100 text-gray-700" aria-label="選單"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></summary><div class="absolute right-0 top-12 w-44 bg-white border border-gray-200 rounded-xl shadow-lg p-2 flex flex-col z-50"><a href="../" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">首頁</a><a href="../#solutions" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">解決方案</a><a href="../#products" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">產品介紹</a><a href="../#faq" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">常見問題</a></div></details></div>
+    <div class="flex items-center gap-2"><a href="../#contact" class="group flex items-center gap-2 rounded-full bg-ink hover:bg-primary px-4 py-2 text-sm font-bold text-white">預約諮詢<span aria-hidden="true" class="grid place-items-center w-5 h-5 rounded-full bg-white/20 text-[11px] group-hover:translate-x-0.5 transition-transform">→</span></a><details class="md:hidden relative"><summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100 text-gray-700" aria-label="選單"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></summary><div class="absolute right-0 top-12 w-44 bg-white border border-gray-200 rounded-xl shadow-lg p-2 flex flex-col z-50"><a href="../" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">首頁</a><a href="../#solutions" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">解決方案</a><a href="../#products" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">產品介紹</a><a href="../#faq" class="px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50">常見問題</a></div></details></div>
   </nav>
 </header>
 
@@ -68,22 +70,23 @@ tailwind.config = { theme: { extend: { colors: {
 </nav>
 
 <!-- Hero (master template: icon + title + pain tagline + image) -->
-<section class="px-5 pt-8 pb-14">
-  <div class="max-w-5xl mx-auto">
-    <div class="flex items-center gap-3"><span class="text-4xl" aria-hidden="true">🏦</span><p class="text-accent font-semibold tracking-widest text-sm">金融場域 · 銀行分行／ATM／金庫保管箱</p></div>
-    <h1 class="mt-4 text-4xl md:text-5xl font-black leading-tight">金融機構</h1>
-    <p class="mt-3 text-xl text-gray-600">高價值資產、門禁控管、事件追溯</p>
-    <figure class="mt-8 rounded-2xl overflow-hidden border border-gray-200">
+<section class="px-3 md:px-5 pt-6 pb-14">
+  <div class="relative max-w-5xl mx-auto rounded-[2.5rem] bg-gradient-to-br from-ink via-[#16277E] to-[#2B6FE0] text-white overflow-hidden px-6 md:px-12 pt-12 pb-9">
+    <span aria-hidden="true" class="ghost ghost-card font-serif italic right-0 -top-4 text-[20vw] md:text-[10rem]">Finance</span>
+    <p class="relative text-sky-300 font-bold tracking-[.3em] text-xs md:text-sm">金融場域 · 銀行分行／ATM／金庫保管箱</p>
+    <h1 class="relative mt-5 font-serif text-5xl md:text-6xl font-bold tracking-tight leading-tight">金融機構</h1>
+    <p class="relative mt-4 text-xl text-slate-300">高價值資產、門禁控管、事件追溯</p>
+    <figure class="relative mt-8 rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
       <img src="../images/finance-vault.png" alt="銀行金庫與保管箱區域 — SPACES 金融場域智慧安防部署示意" loading="lazy" class="w-full h-64 md:h-80 object-cover" />
     </figure>
-    <p class="mt-6 inline-block rounded-lg bg-gold/10 border border-gold/30 px-5 py-3 text-gold font-bold">真正的金融安全，是斷網、停電都不會閉眼。</p>
+    <p class="relative font-serif mt-6 inline-block rounded-lg bg-gold/10 border border-gold/30 px-5 py-3 text-gold font-bold">真正的金融安全，是斷網、停電都不會閉眼。</p>
   </div>
 </section>
 
 <!-- 為什麼需要客製化 (master template intro) -->
-<section class="px-5 py-12 bg-gray-50">
+<section class="px-5 py-12 bg-white">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-black mb-4">為什麼需要客製化的金融服務？</h2>
+    <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-4">為什麼需要客製化的金融服務？</h2>
     <p class="text-gray-600 text-lg max-w-3xl leading-relaxed">金融場域涉及高價值資產與大量人流，一旦發生異常，不僅造成財務損失，更影響營運與信譽。SPACES 依營業／非營業時段自動切換布撤防，金庫前室與保管箱室一有異動就告警；櫃員靜默緊急鈕零時差通報，斷網仍本地續錄、復網補傳，打造全天候安全防護。</p>
   </div>
 </section>
@@ -91,7 +94,7 @@ tailwind.config = { theme: { extend: { colors: {
 <!-- 使用 SPACES 可以解除這些疑慮 (master template: 3 concern cards) -->
 <section class="px-5 py-16">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-black mb-10">使用 SPACES 可以解除這些疑慮</h2>
+    <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-10">使用 SPACES 可以解除這些疑慮</h2>
     <div class="grid md:grid-cols-3 gap-5">
       <div class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6"><p class="font-bold text-gray-900">ATM／營業廳安全管理困難</p><p class="text-sm text-gray-600 mt-2">重要區域異常入侵立即告警，完整保存影像紀錄，降低搶奪、破壞等風險。</p></div>
       <div class="rounded-2xl bg-white border border-gray-100 shadow-sm card-h p-6"><p class="font-bold text-gray-900">擔心重要區域遭入侵</p><p class="text-sm text-gray-600 mt-2">金庫前室、保管箱室打烊後一有非法位移即告警，影像全時留存可追溯。</p></div>
@@ -112,7 +115,7 @@ tailwind.config = { theme: { extend: { colors: {
 <!-- Product config -->
 <section class="px-5 py-16">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-black mb-8">SPACES 怎麼配置？</h2>
+    <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-8">SPACES 怎麼配置？</h2>
     <div class="overflow-x-auto">
       <table class="w-full text-sm border-collapse">
         <thead><tr class="text-left text-gray-500 border-b border-gray-200"><th class="py-3 pr-4">產品配置</th><th class="py-3">部署位置與用途</th></tr></thead>
@@ -130,9 +133,9 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- Spec → value (the goal: spec translated to customer value) -->
-<section class="px-5 py-16 bg-gray-50">
+<section class="px-5 py-16 bg-white">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-black mb-2">規格 — 對你的場域代表什麼</h2>
+    <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-2">規格 — 對你的場域代表什麼</h2>
     <p class="text-gray-500 mb-8 text-sm">把數字翻成你聽得懂的結果。</p>
     <div class="overflow-x-auto">
       <table class="w-full text-sm border-collapse">
@@ -151,7 +154,7 @@ tailwind.config = { theme: { extend: { colors: {
 <!-- Benefits -->
 <section class="px-5 py-16">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-black mb-8">導入後的效益</h2>
+    <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-8">導入後的效益</h2>
     <ul class="grid md:grid-cols-2 gap-4 text-gray-700">
       <li class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5">靜默緊急按鈕於搶案發生時即時通報中心，保障人員安全。</li>
       <li class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5">分區保全自動排程，營業／打烊布撤防免人工操作、杜絕疏漏。</li>
@@ -163,9 +166,9 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- Finance FAQ -->
-<section id="faq" class="px-5 py-16 bg-gray-50">
+<section id="faq" class="px-5 py-16 bg-white">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-black mb-8">金融場域常見問題</h2>
+    <h2 class="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-8">金融場域常見問題</h2>
     <div class="space-y-3">
       <details class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5 group" open><summary class="font-bold cursor-pointer list-none flex justify-between items-center"><h3 class="inline">分行晚上沒人，要怎麼知道有人闖進金庫或保管箱區？</h3><span class="text-accent group-open:rotate-45 transition">+</span></summary><p class="mt-3 text-sm text-gray-600 leading-relaxed">在金庫前室、保管箱室與走道裝設位移偵測，門上加裝開關感應；打烊後一有人移動或門被打開，手機 APP 就即時收到告警並可立刻調出現場畫面，不必有人整夜盯著。新光保全 24 小時管制中心同步收到，必要時派員到場。</p></details>
       <details class="rounded-xl bg-white border border-gray-100 shadow-sm card-h p-5 group"><summary class="font-bold cursor-pointer list-none flex justify-between items-center"><h3 class="inline">誰在幾點進過金庫、機房，事後查得到嗎？</h3><span class="text-accent group-open:rotate-45 transition">+</span></summary><p class="mt-3 text-sm text-gray-600 leading-relaxed">可以。以讀卡機管控門禁，每個人在哪個時段、哪個區域可以通行都能個別設定；所有進出與系統操作都進事件日誌，事後可依時間、人員回溯，並結合影像紀錄，滿足稽核需求。</p></details>
@@ -179,15 +182,23 @@ tailwind.config = { theme: { extend: { colors: {
 </section>
 
 <!-- CTA -->
-<section class="px-5 py-16">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-black mb-3">為您的金融場域打造專屬防護</h2>
-    <p class="text-gray-600 mb-6">免費服務專線 0800-668-850 ｜ service@sks.com.tw</p>
-    <a href="../#contact" class="inline-block rounded-full bg-primary hover:bg-primary-light px-8 py-3 font-bold text-white">預約免費諮詢</a>
+<section class="px-3 md:px-5 py-16">
+  <div class="relative max-w-5xl mx-auto rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#16277E] to-[#1B5CC8] text-white px-6 md:px-14 py-16 text-center">
+    <span aria-hidden="true" class="ghost font-serif italic left-1/2 -translate-x-1/2 -bottom-8 text-[18vw] md:text-[10rem] whitespace-nowrap">Contact</span>
+    <p class="relative text-sky-300 font-bold tracking-[.3em] text-xs mb-4">CONTACT · 預約諮詢</p>
+    <h2 class="relative font-serif text-4xl md:text-5xl font-bold tracking-tight mb-4">為您的金融場域打造專屬防護</h2>
+    <p class="relative text-white/70 mb-8">免費服務專線 0800-668-850 ｜ service@sks.com.tw</p>
+    <a href="../#contact" class="relative group inline-flex items-center gap-3 rounded-full bg-gold text-ink px-9 py-4 font-black hover:bg-yellow-300 transition-colors">預約免費諮詢<span aria-hidden="true" class="grid place-items-center w-6 h-6 rounded-full bg-ink text-white text-[12px] group-hover:translate-x-0.5 transition-transform">→</span></a>
   </div>
 </section>
 </main>
 
-<footer class="border-t border-gray-200 py-8 px-5 text-center text-sm text-gray-500">© 新光保全 Shin Kong Security · SKS SPACES · service@sks.com.tw · 0800-668-850</footer>
+<footer class="px-3 md:px-5 pb-5">
+  <div class="relative max-w-7xl mx-auto rounded-[2rem] bg-ink overflow-hidden text-center py-12 px-5">
+    <span aria-hidden="true" class="ghost font-serif italic left-1/2 -translate-x-1/2 -bottom-4 text-[5.5rem] whitespace-nowrap">SKS Spaces</span>
+    <p class="relative font-serif text-white text-2xl font-black">SKS <span class="text-sky-300">SPACES</span></p>
+    <p class="relative mt-3 text-sm text-slate-400">© 新光保全 Shin Kong Security · SKS SPACES · service@sks.com.tw · 0800-668-850</p>
+  </div>
+</footer>
 </body>
 </html>

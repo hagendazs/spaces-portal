@@ -7034,7 +7034,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "https://images.unsplash.com/photo-1766755418440-f3a342d54a58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA2NDY2MDB8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "url": "./images/generated-1782369698851.png",
                     "mode": "fill"
                   },
                   "width": 1000,
@@ -8106,6 +8106,22 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 12,
+              "id": "jcPaM",
+              "name": "ResilienceVisual",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1782370682860.png",
+                "mode": "fill"
+              },
+              "width": "fill_container",
+              "height": 340,
+              "stroke": "#1E2A38",
+              "strokeWidth": 1
             }
           ]
         },
@@ -8852,7 +8868,7 @@
                       "content": "金融機構"
                     },
                     "Ihs67": {
-                      "content": "金庫・ATM・臨櫃多層防護與證據留存 →",
+                      "content": "斷網停電都不閉眼，要調閱、要稽核隨時都有 →",
                       "fill": "$colorGoldAlt"
                     }
                   }
@@ -8876,7 +8892,7 @@
                       "content": "商場零售"
                     },
                     "Ihs67": {
-                      "content": "專櫃防盜・收銀監控・夜間立體防線 →",
+                      "content": "看不到的損耗，從你看得到的那一刻起就止血 →",
                       "fill": "$colorGoldAlt"
                     }
                   }
@@ -8900,7 +8916,7 @@
                       "content": "倉儲物流"
                     },
                     "Ihs67": {
-                      "content": "大坪數無線佈建・夜間防竊・門禁管制 →",
+                      "content": "場域再大、再偏遠，異常發生時系統都還在線上 →",
                       "fill": "$colorGoldAlt"
                     }
                   }
@@ -8934,7 +8950,7 @@
                       "content": "辦公空間"
                     },
                     "Ihs67": {
-                      "content": "門禁考勤・機密區管制・非上班監控 →",
+                      "content": "嚴謹的門禁，不必犧牲加班的彈性 →",
                       "fill": "$colorGoldAlt"
                     }
                   }
@@ -8958,7 +8974,7 @@
                       "content": "社區大樓"
                     },
                     "Ihs67": {
-                      "content": "公共區安控・智慧對講・訪客管理 →",
+                      "content": "公共空間全時有防線，改建成本卻壓得下來 →",
                       "fill": "$colorGoldAlt"
                     }
                   }
@@ -8982,7 +8998,7 @@
                       "content": "住家"
                     },
                     "Ihs67": {
-                      "content": "門窗警報・長者照看・一鍵求救 →",
+                      "content": "在家、外出一鍵切換，操作直覺、安心不複雜 →",
                       "fill": "$colorGoldAlt"
                     }
                   }
@@ -9973,6 +9989,22 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 12,
+              "id": "LmC2Z",
+              "name": "ProductsVisual",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1782370684472.png",
+                "mode": "fill"
+              },
+              "width": "fill_container",
+              "height": 360,
+              "stroke": "#1E2A38",
+              "strokeWidth": 1
             }
           ]
         },
@@ -16089,7 +16121,7 @@
               "fill": {
                 "type": "image",
                 "enabled": true,
-                "url": "./images/generated-1780883124403.png",
+                "url": "images/generated-1780883124403.png",
                 "mode": "fill"
               },
               "width": "fill_container",
@@ -20510,7 +20542,7 @@
                   "fill": {
                     "type": "image",
                     "enabled": true,
-                    "url": "./images/generated-1780891197580.png",
+                    "url": "images/generated-1780891197580.png",
                     "mode": "fill"
                   },
                   "cornerRadius": "$radiusXl",
@@ -30430,6 +30462,1130 @@
           "ref": "AD27z",
           "name": "SiteFooter",
           "width": "fill_container"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "WI9Gi",
+      "x": 6560,
+      "y": 3595,
+      "name": "SPACES — 金融方案 Desktop 1440",
+      "clip": true,
+      "width": 1440,
+      "fill": "#0A0A0A",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "H3ywv7",
+          "type": "ref",
+          "ref": "zf3kL",
+          "name": "SiteHeaderDark",
+          "width": "fill_container",
+          "x": 0,
+          "y": 0,
+          "fill": "#0A0A0A",
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#FFFFFF15",
+            "offset": {
+              "x": 0,
+              "y": 1
+            }
+          },
+          "descendants": {
+            "yfbPH": {
+              "enabled": false
+            },
+            "T3UJ6v": {
+              "fill": "#4A9FD8"
+            },
+            "c2VXh": {
+              "fill": "#FFFFFF"
+            },
+            "A0h4n2": {
+              "fill": "#FFFFFF"
+            },
+            "p8hwH": {
+              "fill": "#888888"
+            },
+            "Frj2x": {
+              "fill": "#FFFFFF",
+              "content": "首頁",
+              "fontWeight": "$weightMedium"
+            },
+            "SIfKS": {
+              "content": "解決方案",
+              "fill": "#FFFFFF",
+              "fontWeight": "$weightMedium"
+            },
+            "lA4NC": {
+              "fill": "#CCCCCC",
+              "content": "產品介紹",
+              "fontWeight": "$weightMedium"
+            },
+            "c4yn09": {
+              "fill": "#CCCCCC",
+              "content": "支援與常見問題",
+              "fontWeight": "$weightMedium"
+            },
+            "d3bRIi": {
+              "fill": "#CCCCCC",
+              "content": "媒體報導",
+              "fontWeight": "$weightMedium"
+            },
+            "TuV4l": {
+              "fill": "#FFC129",
+              "content": "預約免費諮詢",
+              "fontWeight": "$weightMedium"
+            },
+            "RFvSg": {
+              "fill": "#FFFFFF"
+            },
+            "LY4Zm": {
+              "fill": "#444444"
+            },
+            "d1Ax0L": {
+              "fill": "#888888"
+            },
+            "s0I18Q": {
+              "fill": "#CCCCCC"
+            },
+            "e6lYY": {
+              "fill": "#888888",
+              "enabled": false
+            },
+            "vUmdT": {
+              "fill": "#888888",
+              "enabled": false
+            },
+            "H14AZ7": {
+              "fill": "#888888",
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "RXEBv",
+          "name": "FinHero",
+          "clip": true,
+          "width": "fill_container",
+          "fill": [
+            "#0A0A0A",
+            {
+              "type": "gradient",
+              "gradientType": "radial",
+              "enabled": true,
+              "opacity": 0.55,
+              "rotation": 0,
+              "size": {
+                "width": 0.9,
+                "height": 0.8
+              },
+              "colors": [
+                {
+                  "color": "#1A4A70",
+                  "position": 0
+                },
+                {
+                  "color": "#0A0A0A00",
+                  "position": 1
+                }
+              ],
+              "center": {
+                "y": 0.1
+              }
+            }
+          ],
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            80,
+            96
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "nUTXb",
+              "name": "Eyebrow",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WXmmv",
+                  "name": "Icon",
+                  "fill": "#FFFFFF",
+                  "content": "🏦",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cxYwp",
+                  "name": "Kicker",
+                  "fill": "#4A9FD8",
+                  "content": "金融場域 · 銀行分行／ATM／金庫保管箱",
+                  "fontFamily": "$fontFamily",
+                  "fontSize": "$fontSm",
+                  "fontWeight": "$weightBold",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "H4YGT7",
+              "name": "H1",
+              "fill": "#FFFFFF",
+              "content": "金融機構",
+              "lineHeight": 1.2,
+              "fontFamily": "$fontFamily",
+              "fontSize": 56,
+              "fontWeight": "$weightBold"
+            },
+            {
+              "type": "text",
+              "id": "pbMlV",
+              "name": "Pain",
+              "fill": "#AEB6BF",
+              "content": "高價值資產、門禁控管、事件追溯",
+              "fontFamily": "$fontFamily",
+              "fontSize": "$fontLg",
+              "fontWeight": "$weightRegular"
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 12,
+              "id": "Ybb9H",
+              "name": "HeroImage",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1782370258553.png",
+                "mode": "fill"
+              },
+              "width": "fill_container",
+              "height": 340,
+              "stroke": "#1E2A38",
+              "strokeWidth": 1
+            },
+            {
+              "type": "frame",
+              "id": "KYnND",
+              "name": "OneLinerPill",
+              "fill": "#FFC12918",
+              "cornerRadius": "$radiusMd",
+              "stroke": "#FFC12955",
+              "strokeWidth": 1,
+              "padding": [
+                "$space3",
+                "$space4"
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QA1mw",
+                  "name": "OneLiner",
+                  "fill": "#FFC129",
+                  "content": "真正的金融安全，是斷網、停電都不會閉眼。",
+                  "fontFamily": "$fontFamily",
+                  "fontSize": "$fontMd",
+                  "fontWeight": "$weightBold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uhlM8",
+          "name": "FinWhy",
+          "width": "fill_container",
+          "fill": "#0D1117",
+          "stroke": "#1E2A38",
+          "strokeWidth": {
+            "top": 1
+          },
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            72,
+            96
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "JlXcf",
+              "name": "WhyTitle",
+              "fill": "#FFFFFF",
+              "content": "為什麼需要客製化的金融服務？",
+              "lineHeight": 1.25,
+              "fontFamily": "$fontFamily",
+              "fontSize": "$font3xl",
+              "fontWeight": "$weightBold"
+            },
+            {
+              "type": "text",
+              "id": "iaetO",
+              "name": "WhyBody",
+              "fill": "#9AA7B4",
+              "textGrowth": "fixed-width",
+              "width": 980,
+              "content": "金融場域涉及高價值資產與大量人流，一旦發生異常，不僅造成財務損失，更影響營運與信譽。SPACES 依營業／非營業時段自動切換布撤防，金庫前室與保管箱室一有異動就告警；櫃員靜默緊急鈕零時差通報，斷網仍本地續錄、復網補傳，打造全天候安全防護。",
+              "lineHeight": 1.7,
+              "fontFamily": "$fontFamily",
+              "fontSize": "$fontMd",
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "C9N8Ay",
+          "name": "FinConcerns",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            72,
+            96
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "rKNCL",
+              "name": "ConcernsTitle",
+              "fill": "#FFFFFF",
+              "content": "使用 SPACES 可以解除這些疑慮",
+              "lineHeight": 1.25,
+              "fontFamily": "$fontFamily",
+              "fontSize": "$font3xl",
+              "fontWeight": "$weightBold"
+            },
+            {
+              "type": "frame",
+              "id": "KxZw1",
+              "name": "ConcernCards",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "WEsaf",
+                  "name": "Card_ATM／營業廳安全管理困難",
+                  "width": "fill_container",
+                  "fill": "#0D1117",
+                  "cornerRadius": "$radiusLg",
+                  "stroke": "#1E2A38",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": "$space4",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aCaKn",
+                      "name": "CardTitle",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "ATM／營業廳安全管理困難",
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontLg",
+                      "fontWeight": "$weightBold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "L8UZ97",
+                      "name": "CardDesc",
+                      "fill": "#9AA7B4",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "重要區域異常入侵立即告警，完整保存影像紀錄，降低搶奪、破壞等風險。",
+                      "lineHeight": 1.6,
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontSm",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FMHte",
+                  "name": "Card_擔心重要區域遭入侵",
+                  "width": "fill_container",
+                  "fill": "#0D1117",
+                  "cornerRadius": "$radiusLg",
+                  "stroke": "#1E2A38",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": "$space4",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "G9Bg7",
+                      "name": "CardTitle",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "擔心重要區域遭入侵",
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontLg",
+                      "fontWeight": "$weightBold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "m0042",
+                      "name": "CardDesc",
+                      "fill": "#9AA7B4",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "金庫前室、保管箱室打烊後一有非法位移即告警，影像全時留存可追溯。",
+                      "lineHeight": 1.6,
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontSm",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "u9LcS",
+                  "name": "Card_無法即時掌握各據點狀況",
+                  "width": "fill_container",
+                  "fill": "#0D1117",
+                  "cornerRadius": "$radiusLg",
+                  "stroke": "#1E2A38",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": "$space4",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "e5JI5",
+                      "name": "CardTitle",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "無法即時掌握各據點狀況",
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontLg",
+                      "fontWeight": "$weightBold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vhzKy",
+                      "name": "CardDesc",
+                      "fill": "#9AA7B4",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "手機即可遠端查看，即時接收事件通知，總部一支 APP 看全省分行。",
+                      "lineHeight": 1.6,
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontSm",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xJ4k0",
+              "name": "SolutionChips",
+              "width": "fill_container",
+              "gap": 12,
+              "padding": [
+                "$space4",
+                0,
+                0,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nlbGj",
+                  "name": "ChipsLabel",
+                  "fill": "#8B939E",
+                  "content": "SPACES 解決方案：",
+                  "fontFamily": "$fontFamily",
+                  "fontSize": "$fontSm",
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "U1S86",
+                  "name": "Chip_多層級門禁管理",
+                  "fill": "#16314C",
+                  "cornerRadius": "$radiusPill",
+                  "stroke": "#2E5A85",
+                  "strokeWidth": 1,
+                  "padding": [
+                    "$space2",
+                    "$space3"
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XyXXi",
+                      "name": "ChipText",
+                      "fill": "#E6EDF3",
+                      "content": "多層級門禁管理",
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontSm",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DJh6X",
+                  "name": "Chip_智慧監控",
+                  "fill": "#16314C",
+                  "cornerRadius": "$radiusPill",
+                  "stroke": "#2E5A85",
+                  "strokeWidth": 1,
+                  "padding": [
+                    "$space2",
+                    "$space3"
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Wq1il",
+                      "name": "ChipText",
+                      "fill": "#E6EDF3",
+                      "content": "智慧監控",
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontSm",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wW0oG",
+                  "name": "Chip_即時告警",
+                  "fill": "#16314C",
+                  "cornerRadius": "$radiusPill",
+                  "stroke": "#2E5A85",
+                  "strokeWidth": 1,
+                  "padding": [
+                    "$space2",
+                    "$space3"
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TE6rt",
+                      "name": "ChipText",
+                      "fill": "#E6EDF3",
+                      "content": "即時告警",
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontSm",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "O5it2",
+                  "name": "Chip_韌性證據保存",
+                  "fill": "#16314C",
+                  "cornerRadius": "$radiusPill",
+                  "stroke": "#2E5A85",
+                  "strokeWidth": 1,
+                  "padding": [
+                    "$space2",
+                    "$space3"
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ibyoU",
+                      "name": "ChipText",
+                      "fill": "#E6EDF3",
+                      "content": "韌性證據保存",
+                      "fontFamily": "$fontFamily",
+                      "fontSize": "$fontSm",
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gK9jt",
+              "name": "ValueRow",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zrKfj",
+                  "name": "ValueLabel",
+                  "fill": "#8B939E",
+                  "content": "創造價值：",
+                  "fontFamily": "$fontFamily",
+                  "fontSize": "$fontLg",
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "KBK01",
+                  "name": "ValueText",
+                  "fill": "#4A9FD8",
+                  "content": "提升安全等級與稽核效率",
+                  "fontFamily": "$fontFamily",
+                  "fontSize": "$fontLg",
+                  "fontWeight": "$weightBold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GwUdL",
+          "name": "FinSpecValue",
+          "width": "fill_container",
+          "fill": "#0D1117",
+          "stroke": "#1E2A38",
+          "strokeWidth": {
+            "top": 1
+          },
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            72,
+            96
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "HAxXn",
+              "name": "SVTitle",
+              "fill": "#FFFFFF",
+              "content": "規格 — 對你的場域代表什麼",
+              "lineHeight": 1.25,
+              "fontFamily": "$fontFamily",
+              "fontSize": "$font3xl",
+              "fontWeight": "$weightBold"
+            },
+            {
+              "type": "frame",
+              "id": "tjA5P",
+              "name": "SVTable",
+              "clip": true,
+              "width": "fill_container",
+              "cornerRadius": "$radiusLg",
+              "stroke": "#22344A",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pMgxn",
+                  "name": "Row",
+                  "width": "fill_container",
+                  "fill": "#16314C",
+                  "stroke": "#22344A",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kpdcW",
+                      "name": "CellSpec",
+                      "width": 380,
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wzGta",
+                          "name": "SpecTxt",
+                          "fill": "#9FC3E6",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "規格／數字",
+                          "lineHeight": 1.5,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "$weightBold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "d3qxzl",
+                      "name": "CellVal",
+                      "width": "fill_container",
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "srUwy",
+                          "name": "ValTxt",
+                          "fill": "#9FC3E6",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "對你的場域代表什麼",
+                          "lineHeight": 1.6,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wAXJu",
+                  "name": "Row",
+                  "width": "fill_container",
+                  "fill": "#0C121B",
+                  "stroke": "#22344A",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rzAS6",
+                      "name": "CellSpec",
+                      "width": 380,
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fF8Qr",
+                          "name": "SpecTxt",
+                          "fill": "#FFFFFF",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "三網備援自動切換",
+                          "lineHeight": 1.5,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "$weightBold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "I7ipJ",
+                      "name": "CellVal",
+                      "width": "fill_container",
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cLbi3",
+                          "name": "ValTxt",
+                          "fill": "#C2CCD6",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Wi-Fi／有線／LTE，一條線斷了系統自己換另一條繼續錄，不靠單一網路撐場。",
+                          "lineHeight": 1.6,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Sakfs",
+                  "name": "Row",
+                  "width": "fill_container",
+                  "fill": "#0C121B",
+                  "stroke": "#22344A",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "whPDM",
+                      "name": "CellSpec",
+                      "width": 380,
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cafM1",
+                          "name": "SpecTxt",
+                          "fill": "#FFFFFF",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "事件影像雲端 30 天 ＋ SD 卡全時錄影",
+                          "lineHeight": 1.5,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "$weightBold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "h1wB32",
+                      "name": "CellVal",
+                      "width": "fill_container",
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "t6Wnvp",
+                          "name": "ValTxt",
+                          "fill": "#C2CCD6",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "雙重備份；金融監理要調影像，調得出來、來得及。",
+                          "lineHeight": 1.6,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k0EUry",
+                  "name": "Row",
+                  "width": "fill_container",
+                  "fill": "#0C121B",
+                  "stroke": "#22344A",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "B9S3s7",
+                      "name": "CellSpec",
+                      "width": 380,
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AvtwH",
+                          "name": "SpecTxt",
+                          "fill": "#FFFFFF",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "靜默緊急鈕零時差通報",
+                          "lineHeight": 1.5,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "$weightBold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "M0z5jO",
+                      "name": "CellVal",
+                      "width": "fill_container",
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WvLQ9",
+                          "name": "ValTxt",
+                          "fill": "#C2CCD6",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "搶案當下不驚動歹徒，通報已送達、支援已在路上。",
+                          "lineHeight": 1.6,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rO8v6",
+                  "name": "Row",
+                  "width": "fill_container",
+                  "fill": "#0C121B",
+                  "stroke": "#22344A",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "CkxIU",
+                      "name": "CellSpec",
+                      "width": 380,
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sBK61",
+                          "name": "SpecTxt",
+                          "fill": "#FFFFFF",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "影像可留存於場域（個資法友善）",
+                          "lineHeight": 1.5,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "$weightBold"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qhxzS",
+                      "name": "CellVal",
+                      "width": "fill_container",
+                      "padding": "$space3",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JVblo",
+                          "name": "ValTxt",
+                          "fill": "#C2CCD6",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "高敏感資料不必離開行內，符合法遵與資安要求。",
+                          "lineHeight": 1.6,
+                          "fontFamily": "$fontFamily",
+                          "fontSize": "$fontSm",
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wTdQ1",
+          "name": "FinCTA",
+          "clip": true,
+          "width": "fill_container",
+          "fill": [
+            "#0A0A0A",
+            {
+              "type": "gradient",
+              "gradientType": "linear",
+              "enabled": true,
+              "rotation": 135,
+              "size": {
+                "height": 1
+              },
+              "colors": [
+                {
+                  "color": "#0E2845",
+                  "position": 0
+                },
+                {
+                  "color": "#0A0A0A",
+                  "position": 1
+                }
+              ]
+            }
+          ],
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            88,
+            96
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "k1HAQ",
+              "name": "CTATitle",
+              "fill": "#FFFFFF",
+              "content": "為您的金融場域打造專屬防護",
+              "fontFamily": "$fontFamily",
+              "fontSize": "$font2xl",
+              "fontWeight": "$weightBold"
+            },
+            {
+              "type": "text",
+              "id": "WawJF",
+              "name": "CTASub",
+              "fill": "#9AA7B4",
+              "content": "免費服務專線 0800-668-850 ｜ service@sks.com.tw",
+              "fontFamily": "$fontFamily",
+              "fontSize": "$fontMd",
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "yGhhR",
+              "name": "CTAButton",
+              "fill": "#1B5CC8",
+              "cornerRadius": "$radiusPill",
+              "padding": [
+                "$space3",
+                "$space5"
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cKjz0",
+                  "name": "CTAButtonText",
+                  "fill": "#FFFFFF",
+                  "content": "預約免費諮詢",
+                  "fontFamily": "$fontFamily",
+                  "fontSize": "$fontMd",
+                  "fontWeight": "$weightBold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "f3jTj",
+      "x": 2110,
+      "y": 12775,
+      "name": "Device Mockups",
+      "fill": "#F4F7FA",
+      "gap": 24,
+      "padding": 24,
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "MzyNs",
+          "name": "dev_host",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1782372620588.png",
+            "mode": "fill"
+          },
+          "width": 220,
+          "height": 280,
+          "stroke": "#D7DDE4",
+          "strokeWidth": 1
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "PYWlb",
+          "name": "dev_cam-p1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1782372620062.png",
+            "mode": "fill"
+          },
+          "width": 220,
+          "height": 280,
+          "stroke": "#D7DDE4",
+          "strokeWidth": 1
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "AlkU5",
+          "name": "dev_cam-d1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1782372619017.png",
+            "mode": "fill"
+          },
+          "width": 220,
+          "height": 280,
+          "stroke": "#D7DDE4",
+          "strokeWidth": 1
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "IMWKA",
+          "name": "dev_cam-b1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1782372621526.png",
+            "mode": "fill"
+          },
+          "width": 220,
+          "height": 280,
+          "stroke": "#D7DDE4",
+          "strokeWidth": 1
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "FEfn3",
+          "name": "dev_cam-b2",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1782372619334.png",
+            "mode": "fill"
+          },
+          "width": 220,
+          "height": 280,
+          "stroke": "#D7DDE4",
+          "strokeWidth": 1
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "yn6gT",
+          "name": "dev_sensors",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1782372621849.png",
+            "mode": "fill"
+          },
+          "width": 220,
+          "height": 280,
+          "stroke": "#D7DDE4",
+          "strokeWidth": 1
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 12,
+          "id": "WVGKi",
+          "name": "dev_app",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1782372621657.png",
+            "mode": "fill"
+          },
+          "width": 220,
+          "height": 280,
+          "stroke": "#D7DDE4",
+          "strokeWidth": 1
         }
       ]
     }
